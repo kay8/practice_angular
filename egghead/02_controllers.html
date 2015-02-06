@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+	<script>
+		angular.module("app", [])
+				.controller("FirstCtrl", function FirstCtrl() {
+
+					var first = this;
+					first.greeting = "First";
+				})
+	</script>
+</head>
+<body ng-controller="FirstCtrl as first">
+
+	<input type="text" ng-model="first.greeting">
+	<div ng-class="first.greeting">
+		<p>{{first.greeting}} {{"World"}}</p>
+	</div>
+
+
+
+</body>
+</html>
